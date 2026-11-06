@@ -7,7 +7,7 @@ sub-pixel resampling, so it never jitters the way ffmpeg zoompan does. Run with 
       makes clips/<id>.mp4 from stills/<id>.png for every shot in shots.json whose "clip" is "still"
       (or for the --only ids), using each shot's "move" (default push) and "strength"
 
-Real AI animation (Kling / MiniMax) moves the characters; this moves only the camera. Use it for the budget tier, or
+Real AI animation (a video model) moves the characters; this moves only the camera. Use it for the budget tier, or
 for calm shots (an establishing room, a calendar, a phone screen, the end) while the emotional and action shots get
 real animation (the hybrid tier in references/production.md).
 """

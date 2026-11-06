@@ -6,5 +6,11 @@
   "language": "English",
   "whisper_model": "small.en",
   "default_format": "B",
-  "arcads_productId": ""
+  "tools": {
+    "voice": "ElevenLabs",
+    "music": "ElevenLabs",
+    "stills": "<connected image tool> / <model, e.g. Nano Banana>",
+    "clips_premium": "<connected video tool> / Kling 3.0",
+    "clips_budget": "<connected video tool> / <cheaper start-frame model>"
+  }
 }

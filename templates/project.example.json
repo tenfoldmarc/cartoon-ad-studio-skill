@@ -19,5 +19,5 @@
   "sfx": [
     {"file": "audio/sfx/door_knock.wav", "shot": "07", "offset": 0.35, "gain": 0.5}
   ],
-  "arcads": {"productId": "", "projectId": "", "voiceId": "", "voiceName": ""}
+  "voice": {"tool": "", "name": "", "id": ""}
 }

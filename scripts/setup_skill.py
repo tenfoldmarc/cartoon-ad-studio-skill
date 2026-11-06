@@ -10,8 +10,8 @@ What it does:
      Python between 3.11 and 3.14, and proves it works: every version matches and a real audio decode runs through
      faster-whisper and PyAV
   3. checks the bundled caption fonts
-Arcads is not checked here: stills, clips, voice and music are made through the Arcads connector in Claude, which
-Claude checks in Step 0 of the skill.
+Generation tools are not checked here: voice, music, stills and clips go through the tools connected to Claude
+(ElevenLabs, a video tool), which Claude finds in Step 0 of the skill.
 Options: --python <path> use this Python for the venv
 """
 import json
@@ -242,7 +242,7 @@ def main():
     ff = check_ffmpeg(fixes)
     py = check_venv(check_only, forced, fixes)
     fo = check_fonts(fixes)
-    say('note', 'Arcads', 'stills, clips, voice and music go through the Arcads connector; Claude checks it in Step 0')
+    say('note', 'tools', 'voice, music, stills and clips go through your connected tools; Claude finds them in Step 0')
     ready = ff and py and fo
     print('READY' if ready else 'NOT READY')
     if ready:
