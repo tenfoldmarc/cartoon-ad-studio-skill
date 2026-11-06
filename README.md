@@ -18,7 +18,7 @@ the voice and the shots before anything expensive gets made.
    "impossible what-if" explainer), with a claims check so the ad never promises what your product doesn't do.
 4. **Voices it**: you pick the narrator from a few samples.
 5. **Creates your characters and every shot** as Pixar-style stills, and shows you a contact sheet to approve.
-6. **Animates every shot** with Kling 3.0.
+6. **Animates every shot** on the budget you pick: from free camera moves to MiniMax H3 (cheap) or Kling 3.0 (sharpest).
 7. **Edits the finished ad**: hard cuts timed to the voice, small centered captions, a music bed, your end card.
    You get a 1080x1920 ad ready to upload, plus a phone copy.
 
@@ -29,9 +29,17 @@ the voice and the shots before anything expensive gets made.
 - A Mac, Windows or Linux computer
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or the Claude Desktop app
 - An [Arcads](https://www.arcads.ai) account (new accounts get free trial credits), connected to Claude as a connector.
-  Arcads makes the stills (Nano Banana), the animation (Kling 3.0), the voice and the music. A 60 to 70 second ad uses
-  roughly 6,000 to 8,000 credits, mostly for the animated clips; the skill tells you the cost and asks before every
-  batch.
+  Arcads makes the stills (Nano Banana), the animation, the voice and the music. You pick how much to spend on the
+  animation, which is almost the whole cost (a 60 to 70 second ad, about 30 shots):
+
+  | Tier | Animation | About |
+  |---|---|---|
+  | Zero | smooth camera moves over each still, made on your computer | 100 credits (voice + music) |
+  | Hybrid | real animation on the 8 to 12 shots that matter, camera moves on the rest | 600 to 1,000 credits |
+  | Budget | MiniMax H3 on every shot | 2,250 credits |
+  | Premium | Kling 3.0 on every shot (sharpest) | 7,400 credits |
+
+  The skill tells you the cost and asks before every batch.
 - ffmpeg and Python 3.11 or newer (the skill checks and tells you exactly how to install them if they're missing)
 
 Don't worry about connecting these manually. The skill walks you through everything on first run.

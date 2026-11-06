@@ -10,7 +10,12 @@ Library are built: a story or a surprising "what if" told by a narrator over Pix
 centered captions, a music bed and a 3 second end card.
 
 The pipeline: **(1) study winners -> (2) research the sales page -> (3) script -> (4) voiceover -> (5) characters +
-stills -> (6) animate with Kling 3.0 -> (7) music + edit -> (8) QA and deliver.**
+stills -> (6) animate -> (7) music + edit -> (8) QA and deliver.**
+
+Four budget tiers for the animation, the step that is almost the whole cost (31-shot ad, clips only): **Premium**
+Kling 3.0 ~7,400 credits, **Budget** MiniMax H3 ~2,250, **Hybrid** H3 on the acting shots + free camera-move clips on
+the calm ones ~600 to 1,000, **Zero** camera-move clips only, 0 (about 100 for the whole ad). Details and when to
+use which: `SKILL/references/production.md`, "Pick a tier".
 
 `SKILL` below means this skill's folder (the one holding this file). `PY` means `SKILL/.venv/bin/python`
 (Windows: `SKILL\.venv\Scripts\python.exe`). Scripts print plain progress; read their output, don't guess.
@@ -22,6 +27,7 @@ Read `SKILL/references/playbook.md` before writing any script, `SKILL/references
 | `/cartoon-ad-studio` | The whole ad: Steps 1 to 8 |
 | `/cartoon-ad-studio study <videos>` | Only break down reference ads (Step 1) |
 | `/cartoon-ad-studio script` | Research + script only, no credits spent (Steps 2 and 3) |
+| `/cartoon-ad-studio budget` | The whole ad on the cheapest real-animation tier (MiniMax H3) unless they pick another |
 | `/cartoon-ad-studio resume` | Carry on an ad already started (reads its folder and picks up at the first missing step) |
 | `/cartoon-ad-studio setup` | Run or redo first-time setup (Step 0) |
 
@@ -107,13 +113,17 @@ Follow `production.md` Step 5:
    to prove the shots cover the voice exactly (it prints each shot's length; fix any mismatch it reports).
 3. Quote the stills batch (count x cost) and wait for a yes. Generate, download to `stills/<id>.png`, make the contact
    sheet (`qa.py stills`), look at it, re-make weak ones.
-4. Show the contact sheet to the user with the **clip quote**: number of shots x ~240 credits (Kling 3.0, 5 s) plus a
-   few re-takes, and the current balance. Wait for a yes.
+4. Show the contact sheet to the user with the **clip quote for each tier** (production.md "Pick a tier"): this ad's
+   shot count x 240 (Premium, Kling 3.0), x 72 (Budget, MiniMax H3), the Hybrid split you propose (which shots get
+   real animation and why), and Zero; plus a few re-takes and the current balance. Recommend Budget or Hybrid for a
+   first test, Premium for the version they scale. Wait for their pick and a yes. Write each shot's `clip`
+   (`kling` / `minimax` / `still`) and, for stills, a `move` into shots.json.
 
 ## Step 6. Animate
-Follow `production.md` Step 6: one Kling 3.0 clip per shot from its still, downloaded to `clips/<id>.mp4`. QA every
-clip with `qa.py clips` and look at the sheets; re-take broken ones (say how many and the cost first if it is more
-than the few you quoted).
+Follow `production.md` Step 6: each shot made the way its `clip` field says (Kling 3.0, MiniMax H3, or a free
+camera-move clip with `motion_still.py`), saved to `clips/<id>.mp4`. QA every clip with `qa.py clips` and look at the
+sheets; re-take broken ones (say how many and the cost first if it is more than the few you quoted). A shot that
+keeps breaking on MiniMax H3 (hands, fast action) goes to Kling 3.0.
 
 ## Step 7. Music and edit
 1. Music bed (`production.md` Step 7), the length of `timeline.json` `total`. Cost + yes first.
@@ -127,8 +137,9 @@ than the few you quoted).
   and look at it: every shot reads, captions sit in the middle and never cover a face, the end card is right.
 - Listen to it (or `arcads_analyze_media` with the video: "list any mispronounced words, clipped words, music that
   drowns the voice, awkward pauses, with timestamps"); verify anything it flags yourself before changing it.
-- Deliver: the file paths, length, credits spent (balance before and after), and the honest list of anything that may
-  look off. Offer the usual next steps: a 60 s or 30 s cutdown, a second hook on the same body (re-voice and re-make
+- Deliver: the file paths, length, the tier used, credits spent (balance before and after), and the honest list of
+  anything that may look off. If they used Zero or Hybrid and the ad tests well, offer to re-make the camera-move shots
+  with real animation for the version they scale. Offer the usual next steps: a 60 s or 30 s cutdown, a second hook on the same body (re-voice and re-make
   only the first 2 or 3 shots), a 16:9 or 1:1 version (re-make the stills in that aspect ratio).
 
 ## Project folder
