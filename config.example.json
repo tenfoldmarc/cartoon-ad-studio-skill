@@ -1,0 +1,10 @@
+{
+  "setupComplete": true,
+  "setupDate": "2026-11-05",
+  "brand": "Your Brand",
+  "projects_dir": "~/cartoon-ads",
+  "language": "English",
+  "whisper_model": "small.en",
+  "default_format": "B",
+  "arcads_productId": ""
+}

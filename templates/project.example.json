@@ -1,0 +1,23 @@
+{
+  "name": "forty-one-bedtimes",
+  "brand": "Your Brand",
+  "format": "B",
+  "offer_link": "https://example.com/offer",
+  "end_card": {
+    "seconds": 3,
+    "kicker": "FREE FOR 7 DAYS",
+    "title": ["Your Brand", "Product Name"],
+    "offer": "",
+    "url": "example.com/offer",
+    "bg": "#0b1220",
+    "accent": "#f5b072",
+    "text": "#faf3e8"
+  },
+  "captions": {"y": 0.62, "size": 0.056, "weight": "SemiBold"},
+  "music_gain_under_vo": 0.22,
+  "music_gain_end": 0.55,
+  "sfx": [
+    {"file": "audio/sfx/door_knock.wav", "shot": "07", "offset": 0.35, "gain": 0.5}
+  ],
+  "arcads": {"productId": "", "projectId": "", "voiceId": "", "voiceName": ""}
+}

@@ -1,0 +1,32 @@
+{
+  "style": "Pixar-style 3D feature animation, appealing stylized characters, soft subsurface skin, detailed fabric and props, cinematic lighting, shallow depth of field, rich warm color grade. Vertical 9:16, subject in the middle of the frame. No text unless stated.",
+  "refs": {
+    "maya": "<asset id of Maya's character sheet>",
+    "lily": "<asset id of Lily's character sheet>"
+  },
+  "display": {
+    "41": "41",
+    "four o clock": "4 o'clock",
+    "every um": "every \"um\""
+  },
+  "shots": [
+    {
+      "id": "01",
+      "vo": "I missed 41 bedtimes last year",
+      "caps": ["I missed", "41 bedtimes", "last year"],
+      "refs": ["maya", "lily"],
+      "anchor": "office",
+      "still": "Late at night in a small cozy home office: Maya (from the first reference) sits hunched at a wooden desk editing a video on her laptop, the screen lighting her tired face. In the foreground the office door is half open and little Lily (from the second reference) is asleep on the hallway floor against the door frame in her yellow pajamas, hugging her blue storybook. Warm laptop glow against cool dark blue night.",
+      "motion": "Maya keeps editing without noticing; Lily sleeps against the door frame, breathing gently. Very slow camera push-in toward Maya past the sleeping child. No text, no speech."
+    },
+    {
+      "id": "02",
+      "vo": "I counted",
+      "caps": ["I counted"],
+      "refs": ["@01"],
+      "anchor": "office",
+      "still": "Close-up of a paper wall calendar pinned next to the office door, dozens of days crossed out in red marker, a red marker hanging on a string. Same office and lighting as the reference.",
+      "motion": "Slow push-in on the crossed-out days; the marker on its string sways slightly. No text changes, no speech."
+    }
+  ]
+}
